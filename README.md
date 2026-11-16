@@ -22,6 +22,6 @@ JavaScript • Python • React.js • Firebase • HTML5 • CSS3 • Tailwind 
 
 **Let's Connect!**
 
-🌐 Portfolio: https://elihu-nene-add-portfolio.com/  
+🌐 Portfolio: https://elihu-nene-addo-portfolio.com/  
 💼 LinkedIn: https://linkedin.com/in/elihuneneaddo  
 🐙 GitHub: https://github.com/qwesikhalifa
