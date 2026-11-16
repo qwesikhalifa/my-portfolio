@@ -1,0 +1,162 @@
+/* ========== 1. DESIGN TOKENS ==========
+   CSS variables: change a color here and it updates everywhere. */
+:root {
+  --bg: #0d1117;
+  --surface: #161b22;
+  --border: #30363d;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --accent: #58a6ff;
+  --radius: 12px;
+  --max-width: 1000px;
+}
+
+/* ========== 2. RESET & BASE ========== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+ul { list-style: none; }
+
+/* Shared layout: every section is centered with the same max width */
+section, .site-header, footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 32px;
+}
+
+/* ========== 3. HEADER ========== */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+}
+.logo { font-weight: 700; font-size: 1.4rem; color: var(--text); }
+.site-header nav a { margin-left: 24px; color: var(--muted); }
+.site-header nav a:hover { color: var(--accent); text-decoration: none; }
+
+/* ========== 4. HERO ========== */
+.hero { min-height: 70vh; display: flex; flex-direction: column; justify-content: center; }
+.eyebrow { color: var(--accent); margin-bottom: 8px; }
+.hero h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1.1; }
+.hero h2 { font-size: clamp(1.8rem, 6vw, 3.2rem); color: var(--muted); margin-bottom: 24px; }
+.lead { max-width: 540px; color: var(--muted); margin-bottom: 32px; }
+
+.btn {
+  display: inline-block;
+  width: fit-content;
+  padding: 12px 24px;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  color: var(--accent);
+  transition: background 0.2s;
+}
+.btn:hover { background: rgba(88, 166, 255, 0.12); text-decoration: none; }
+
+/* ========== 5. PROJECT CARDS ==========
+   CSS Grid: auto-fit makes as many columns as fit, so it works on phones too. */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.card:hover { transform: translateY(-4px); border-color: var(--accent); }
+.card h3 { margin-bottom: 8px; }
+.card p { color: var(--muted); margin-bottom: 16px; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.tags li {
+  font-size: 0.8rem;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: rgba(88, 166, 255, 0.12);
+  color: var(--accent);
+}
+.card-links a { margin-right: 16px; font-size: 0.9rem; }
+
+/* ========== 6. ABOUT ========== */
+.about { display: flex; gap: 40px; align-items: center; }
+.about-text p { margin-bottom: 16px; color: var(--muted); }
+.skills { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.skills li::before { content: "▹ "; color: var(--accent); }
+.avatar { width: 220px; height: 220px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--border); }
+
+/* ========== 7. CONTACT & FOOTER ========== */
+.contact { text-align: center; }
+.contact p { color: var(--muted); max-width: 480px; margin: 0 auto 24px; }
+.socials { margin-top: 24px; }
+.socials a { margin: 0 12px; }
+footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 24px; }
+
+/* ========== SKILLS PANEL ========== */
+.skills-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 24px;
+}
+
+.skill-group {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+/* The last group doesn't need a divider under it */
+.skill-group:last-child {
+  border-bottom: none;
+}
+
+.skill-group h3 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pills li {
+  font-size: 0.85rem;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(88, 166, 255, 0.12);
+  color: var(--accent);
+  transition: background 0.2s;
+}
+
+.pills li:hover {
+  background: rgba(88, 166, 255, 0.25);
+}
+
+/* ========== 8. RESPONSIVE ==========
+   Media query: on screens 700px wide or smaller, stack the About section. */
+@media (max-width: 700px) {
+  section { padding: 56px 24px; }
+  .about { flex-direction: column-reverse; text-align: center; }
+  .skills { justify-content: center; }
+  .site-header nav a { margin-left: 16px; }
+}
