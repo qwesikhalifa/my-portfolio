@@ -9,6 +9,7 @@
   --accent: #58a6ff;
   --radius: 12px;
   --max-width: 1000px;
+  --nav-bg: rgba(13, 17, 23, 0.8);
 }
 
 /* ========== 2. RESET & BASE ========== */
@@ -28,7 +29,7 @@ a:hover { text-decoration: underline; }
 ul { list-style: none; }
 
 /* Shared layout: every section is centered with the same max width */
-section, .site-header, footer {
+section, footer {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 80px 24px;
@@ -39,16 +40,31 @@ section, .site-header, footer {
   margin-bottom: 32px;
 }
 
-/* ========== 3. HEADER ========== */
-.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 24px;
-}
 .logo { font-weight: 700; font-size: 1.4rem; color: var(--text); }
 .site-header nav a { margin-left: 24px; color: var(--muted); }
 .site-header nav a:hover { color: var(--accent); text-decoration: none; }
+
+/* ========== 3. HEADER/NAV ========== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-header nav { display: flex; align-items: center; }
+
+/* Stops the sticky bar from covering section titles when you click a nav link */
+section { scroll-margin-top: 70px; }
 
 /* ========== 4. HERO ========== */
 .hero { min-height: 70vh; display: flex; flex-direction: column; justify-content: center; }
