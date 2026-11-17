@@ -179,6 +179,18 @@ footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 2
   background: rgba(88, 166, 255, 0.25);
 }
 
+/* ========== 8. REVEAL ANIMATION ==========
+   Elements with the "reveal" class will fade in and slide up when they enter the viewport. */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
 /* ========== 8. RESPONSIVE ==========
    Media query: on screens 700px wide or smaller, stack the About section. */
 @media (max-width: 700px) {
