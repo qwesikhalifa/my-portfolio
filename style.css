@@ -191,6 +191,12 @@ footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 2
   transform: none;
 }
 
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
 /* ========== 8. RESPONSIVE ==========
    Media query: on screens 700px wide or smaller, stack the About section. */
 @media (max-width: 700px) {
