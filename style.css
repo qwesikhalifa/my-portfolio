@@ -197,6 +197,34 @@ footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 2
   gap: 16px;
 }
 
+.contact-form {
+  max-width: 480px;
+  margin: 32px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+.contact-form label { color: var(--muted); font-size: 0.9rem; }
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font: inherit;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid var(--accent);
+  border-color: transparent;
+}
+button.btn { background: none; font: inherit; cursor: pointer; align-self: flex-start; }
+#form-status { min-height: 1.5em; }
+
 /* ========== 8. RESPONSIVE ==========
    Media query: on screens 700px wide or smaller, stack the About section. */
 @media (max-width: 700px) {

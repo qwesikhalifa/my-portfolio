@@ -200,7 +200,21 @@
     <section id="contact" class="contact">
       <h2 class="section-title">Get in touch</h2>
       <p>I'm open to opportunities and collaborations. My inbox is always open.</p>
-      <a class="btn" href="mailto:qwesikhalifa0707@gmail.com">Say hello</a>
+      <form class="contact-form" action="https://formspree.io/f/xzerropw" method="POST">
+  <label>Name
+    <input type="text" name="name" required />
+  </label>
+  <label>Email
+    <input type="email" name="email" required />
+  </label>
+  <label>Message
+    <textarea name="message" rows="5" required></textarea>
+  </label>
+  <!-- Hidden spam trap: bots fill it in, humans never see it -->
+  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+  <button type="submit" class="btn">Send message</button>
+  <p id="form-status" role="status"></p>
+</form>
       <p class="socials">
         <a href="https://github.com/qwesikhalifa" target="_blank" rel="noopener">GitHub</a>
         <a href="https://linkedin.com/in/elihuneneaddo" target="_blank" rel="noopener">LinkedIn</a>
