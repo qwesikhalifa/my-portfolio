@@ -289,6 +289,32 @@ body { overflow-x: hidden; }
   box-shadow: 0 12px 40px rgba(88, 166, 255, 0.18);
 }
 
+/* ========== GRADIENT BUTTONS ========== */
+.btn,
+button.btn {
+  background: linear-gradient(90deg, #58a6ff, #a371f7, #58a6ff);
+  background-size: 200% 100%;
+  color: #f8fafd;
+  font-weight: 600;
+  border: none;
+  transition: background-position 0.5s, transform 0.2s, box-shadow 0.2s;
+}
+.btn:hover,
+button.btn:hover {
+  background-position: 100% 0;
+  transform: translateY(-2px);
+  box-shadow: 0 0 24px rgba(88, 166, 255, 0.45);
+  text-decoration: none;
+}
+
+.btn.btn-ghost {
+  background: var(--glass);
+  color: var(--accent);
+  border: 1px solid var(--glass-border);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
 /* ========== 8. RESPONSIVE ==========
    Media query: on screens 700px wide or smaller, stack the About section. */
 @media (max-width: 700px) {
