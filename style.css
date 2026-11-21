@@ -12,6 +12,7 @@
   --nav-bg: rgba(13, 17, 23, 0.8);
   --glass: rgba(255, 255, 255, 0.05);
 --glass-border: rgba(255, 255, 255, 0.12);
+--font: "Merriweather", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
 /* ========== 2. RESET & BASE ========== */
@@ -20,7 +21,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font);
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
