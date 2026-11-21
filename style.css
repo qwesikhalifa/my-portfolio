@@ -329,6 +329,8 @@ button.btn:hover {
   text-decoration: none;
 }
 
+.btn:hover .fa-download { transform: translateY(3px); }
+
 .btn.btn-ghost {
   background: var(--glass);
   color: var(--accent);
@@ -336,6 +338,17 @@ button.btn:hover {
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
 }
+
+.btn i { margin-right: 8px; }
+
+button.btn {
+  display: inline-flex;
+  align-items: center;
+}
+.btn:hover i {
+  transform: translateX(3px) rotate(-8deg);
+}
+.btn i { transition: transform 0.2s; }
 
 /* ========== WAVING HAND ========== */
 .wave {
@@ -394,6 +407,23 @@ button.btn:hover {
 }
 .social-text small { color: var(--muted); font-size: 0.8rem; }
 
+.title-icon {
+  color: var(--accent);
+  margin-right: 10px;
+  font-size: 0.85em;   /* slightly smaller than the heading text */
+}
+
+/* ========== NAV ICONS ========== */
+.site-header nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.site-header nav a i {
+  color: var(--accent);
+  font-size: 0.95rem;
+}
+
 /* ========== SAFETY NETS ========== */
 
 /* Visitors who turned off animations in their OS get a still page */
@@ -414,4 +444,6 @@ button.btn:hover {
   .skills { justify-content: center; }
   .site-header nav a { margin-left: 16px; }
   .orb { width: 260px; height: 260px; filter: blur(60px); }
+  .site-header nav a span { display: none; }
+  .site-header nav a i { font-size: 1.15rem; }
 }
