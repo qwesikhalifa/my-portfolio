@@ -315,11 +315,29 @@ button.btn:hover {
   backdrop-filter: blur(12px);
 }
 
+/* ========== WAVING HAND ========== */
+.wave {
+  display: inline-block;          /* transforms don't work on plain inline text */
+  transform-origin: 70% 70%;      /* pivot near the wrist, not the center */
+  animation: wave 2.5s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%   { transform: rotate(0deg); }
+  10%  { transform: rotate(14deg); }
+  20%  { transform: rotate(-8deg); }
+  30%  { transform: rotate(14deg); }
+  40%  { transform: rotate(-4deg); }
+  50%  { transform: rotate(10deg); }
+  60%  { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
 /* ========== SAFETY NETS ========== */
 
 /* Visitors who turned off animations in their OS get a still page */
 @media (prefers-reduced-motion: reduce) {
-  .orb, .hero h1 { animation: none; }
+  .orb, .hero h1, .wave { animation: none; }
 }
 
 /* Old browsers without backdrop-filter get solid panels instead */
