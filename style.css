@@ -10,6 +10,8 @@
   --radius: 12px;
   --max-width: 1000px;
   --nav-bg: rgba(13, 17, 23, 0.8);
+  --glass: rgba(255, 255, 255, 0.05);
+--glass-border: rgba(255, 255, 255, 0.12);
 }
 
 /* ========== 2. RESET & BASE ========== */
@@ -224,6 +226,31 @@ footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 2
 }
 button.btn { background: none; font: inherit; cursor: pointer; align-self: flex-start; }
 #form-status { min-height: 1.5em; }
+
+/* ========== ANIMATED BACKGROUND ========== */
+body { overflow-x: hidden; }
+
+.bg-orbs {
+  position: fixed;
+  inset: 0;                 /* shorthand for top/right/bottom/left: 0 */
+  z-index: -1;              /* sits behind all content */
+  overflow: hidden;
+  pointer-events: none;     /* clicks pass through */
+}
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+  animation: float 20s ease-in-out infinite alternate;
+}
+.orb-1 { width: 420px; height: 420px; background: #58a6ff; top: -100px; left: -100px; }
+.orb-2 { width: 380px; height: 380px; background: #a371f7; top: 40%; right: -120px; animation-duration: 25s; }
+.orb-3 { width: 340px; height: 340px; background: #2ea8a0; bottom: -120px; left: 30%; opacity: 0.35; animation-duration: 30s; }
+
+@keyframes float {
+  to { transform: translate(70px, 50px) scale(1.15); }
+}
 
 /* ========== 8. RESPONSIVE ==========
    Media query: on screens 700px wide or smaller, stack the About section. */
