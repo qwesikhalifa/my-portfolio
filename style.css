@@ -265,6 +265,30 @@ body { overflow-x: hidden; }
   to { background-position: 150% 0; }
 }
 
+/* ========== GLASSMORPHISM ========== */
+.card,
+.skills-panel,
+.contact-form input,
+.contact-form textarea {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(140%);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.site-header {
+  background: rgba(13, 17, 23, 0.45);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  backdrop-filter: blur(14px) saturate(140%);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.card:hover {
+  border-color: rgba(88, 166, 255, 0.6);
+  box-shadow: 0 12px 40px rgba(88, 166, 255, 0.18);
+}
+
 /* ========== 8. RESPONSIVE ==========
    Media query: on screens 700px wide or smaller, stack the About section. */
 @media (max-width: 700px) {
