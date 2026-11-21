@@ -43,7 +43,29 @@ section, footer {
   margin-bottom: 32px;
 }
 
-.logo { font-weight: 700; font-size: 1.4rem; color: var(--text); }
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 999px;          /* pill shape */
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.logo i {
+  color: var(--accent);
+  font-size: 1.05rem;
+}
+.logo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(88, 166, 255, 0.4);
+  text-decoration: none;
+}
+  .logo-text { display: none; }
 .site-header nav a { margin-left: 24px; color: var(--muted); }
 .site-header nav a:hover { color: var(--accent); text-decoration: none; }
 
