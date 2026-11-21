@@ -1,17 +1,17 @@
 {
   "rewrites": [
     {
-      "source": "/download/ELIHU_NENE_ADDO_CV-RESUME.pdf",
-      "destination": "files/ELIHU_NENE_ADDO_CV-RESUME.pdf"
+      "source": "/download/resume.pdf",
+      "destination": "/files/ELIHU_NENE_ADDO_CV-RESUME.pdf"
     }
   ],
   "headers": [
     {
-      "source": "/download/ELIHU_NENE_ADDO_CV-RESUME.pdf",
+      "source": "/download/resume.pdf",
       "headers": [
         {
           "key": "Content-Disposition",
-          "value": "attachment; filename=\"ELIHU_NENE_ADDO_CV-RESUME.pdf\""
+          "value": "attachment; filename=\"Elihu-Nene-Addo-Resume.pdf\""
         }
       ]
     }
