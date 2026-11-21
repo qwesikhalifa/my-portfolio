@@ -252,6 +252,19 @@ body { overflow-x: hidden; }
   to { transform: translate(70px, 50px) scale(1.15); }
 }
 
+/* ========== GRADIENT TEXT ========== */
+.hero h1 {
+  background: linear-gradient(90deg, #58a6ff, #a371f7, #f778ba, #58a6ff);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-shift 8s linear infinite;
+}
+@keyframes gradient-shift {
+  to { background-position: 150% 0; }
+}
+
 /* ========== 8. RESPONSIVE ==========
    Media query: on screens 700px wide or smaller, stack the About section. */
 @media (max-width: 700px) {
