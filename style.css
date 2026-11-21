@@ -333,6 +333,45 @@ button.btn:hover {
   100% { transform: rotate(0deg); }
 }
 
+/* ========== SOCIAL LINKS ========== */
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 40px;
+}
+.social-list a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  color: var(--text);
+  text-align: left;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+.social-list a:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px rgba(88, 166, 255, 0.2);
+  text-decoration: none;
+}
+.social-list i {
+  font-size: 1.6rem;
+  color: var(--accent);
+}
+.social-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+.social-text small { color: var(--muted); font-size: 0.8rem; }
+
 /* ========== SAFETY NETS ========== */
 
 /* Visitors who turned off animations in their OS get a still page */
